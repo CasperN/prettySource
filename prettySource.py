@@ -7,6 +7,13 @@ highlighted pdf document.
 
 Usage:
   python prettySouce.py [inputFiles] [outputFile.pdf]
+
+
+TODO:
+  * Put borders around source code
+  * Add the names of files above source code box
+  * Flags for `outputFile` and default value
+  * Pipe `pandocInput` instead of using tmp file
 """
 import sys
 import os
@@ -48,7 +55,7 @@ def writeAndOpen(pandocInput, outputFile):
 
 if __name__ == '__main__':
   if len(sys.argv) < 3:
-    print("Renders a list of source code files to PDF.")
+    print("Renders a list of source code files to PDF using pandoc")
     print("args: [source code files] [outputFile]")
     sys.exit()
   inputFiles = sys.argv[1:-1]
