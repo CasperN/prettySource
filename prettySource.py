@@ -48,7 +48,8 @@ def writeAndOpen(pandocInput, outputFile):
 
 if __name__ == '__main__':
   if len(sys.argv) < 3:
-    print("args: list of files to print source code. Last file is output name")
+    print("Renders a list of source code files to PDF.")
+    print("args: [files to print source code] [outputFile]")
     sys.exit()
   inputFiles = sys.argv[1:-1]
   outputFile = sys.argv[-1]
